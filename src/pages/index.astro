@@ -1,15 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import '@/styles/global.css';
 import { ModeToggle } from '@/components/ModeToggle';
+import Layout from '../layouts/Layout.astro';
+import FirstRow from '@/components/contents/FirstRow.astro';
+import AboutMe from '@/components/contents/AboutMe.astro';
+import SkillsCard from '@/components/contents/SkillsCard.astro';
+import Introduction from '@/components/contents/Introduction.astro';
+import Contact from '@/components/contents/Contact.astro';
 ---
 
 <script is:inline>
@@ -34,115 +31,13 @@ import { ModeToggle } from '@/components/ModeToggle';
 <Layout title="Welcome to Astro.">
 	<main>
     <ModeToggle client:load />
-    <section class="grid gap-2 grid-cols-2 lg:grid-cols-6 ">
-      <DrawerDemo />
-      
-      <!-- firstRow -->
-      <Card className="col-span-2 lg:col-span-6">
-        <CardHeader>
-          <CardTitle>Chakras Andika</CardTitle>
-        </CardHeader>
-      </Card>
-
-      <!-- secondRow -->
-      <Card className="col-span-2 lg:col-span-4">
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
-      <Card className="col-span-2 lg:col-span-2">
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
-
-      <!-- thirdRow -->
-      <Card className="col-span-1">
-        <CardContent className="flex justify-center items-center !py-3">
-          <p>Ruby on Rails</p>
-        </CardContent>
-      </Card>
-      <Card className="col-span-1">
-        <CardContent className="flex justify-center items-center !py-3">
-          <p>Ruby on Rails</p>
-        </CardContent>
-      </Card>
-      <Card className="col-span-1">
-        <CardContent className="flex justify-center items-center !py-3">
-          <p>Ruby on Rails</p>
-        </CardContent>
-      </Card>
-      <Card className="col-span-1">
-        <CardContent className="flex justify-center items-center !py-3">
-          <p>Ruby on Rails</p>
-        </CardContent>
-      </Card>
-      <Card className="col-span-1">
-        <CardContent className="flex justify-center items-center !py-3">
-          <p>Ruby on Rails</p>
-        </CardContent>
-      </Card>
-      <Card className="col-span-1">
-        <CardContent className="flex justify-center items-center !py-3">
-          <p>Ruby on Rails</p>
-        </CardContent>
-      </Card>
-
-      <!-- fourth row -->
-      <Card className="col-span-2 lg:col-span-2">
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
-      <Card className="col-span-2 lg:col-span-4">
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
-
-      <!-- fifth row -->
-      <Card className="col-span-2 lg:col-span-6">
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter>
-      </Card>
+    <section class="grid h-fit gap-2 grid-cols-2 lg:grid-cols-6 ">
+      <FirstRow />
+      <AboutMe />
+      <SkillsCard />
+      <Introduction />
+      <Contact />
     </section>
-    
 </Layout>
 
 <style>
@@ -150,6 +45,7 @@ import { ModeToggle } from '@/components/ModeToggle';
     @apply p-1 lg:px-10;
     @apply mx-auto;
     @apply max-w-screen-sm lg:max-w-screen-xl;
+    @apply flex h-full;
 		width: 100%;
 		color: white;
 		font-size: 20px;

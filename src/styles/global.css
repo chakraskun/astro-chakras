@@ -4,8 +4,7 @@
  
 @layer base {
   :root {
-    --screen-nav: calc(100dvh - 65px);
-    --top-after-nav: 65px;
+    --screen-nav: 100dvh;
 
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -74,6 +73,7 @@
     @apply border-border;
   }
   body {
+    height: var(--screen-nav);
     @apply bg-background text-foreground;
   }
 }
