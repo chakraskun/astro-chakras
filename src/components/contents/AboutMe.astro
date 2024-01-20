@@ -7,29 +7,26 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { ContactMe } from "@/components/ContactMe"
+import { MyAvatar } from "@/components/MyAvatar"
 ---
 
 <Card className="col-span-2 lg:col-span-4">
   <CardHeader>
-    <CardTitle>Card Title</CardTitle>
-    <CardDescription>Card Description</CardDescription>
+    <MyAvatar client:load />
   </CardHeader>
-  <CardContent>
-    <p>Card Content</p>
+  <CardContent className="text-4xl font-bold">
+    <p>Chakras Andika</p>
+    <p>is a Software Enginner</p>
+    <p>currently coding at Midstay</p>
   </CardContent>
-  <CardFooter>
-    <p>Card Footer</p>
-  </CardFooter>
 </Card>
-<Card className="col-span-2 lg:col-span-2">
-  <CardHeader>
-    <CardTitle>Card Title</CardTitle>
-    <CardDescription>Card Description</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p>Card Content</p>
+<Card className="col-span-2 h-full gap-2 py-3 justify-between flex flex-col lg:col-span-2">
+  <CardHeader />
+  <CardContent className="font-bold flex text-center text-xl">
+    <p>Any thoughts you'd like to discuss?</p>
   </CardContent>
   <CardFooter>
-    <p>Card Footer</p>
+    <ContactMe />
   </CardFooter>
 </Card>
