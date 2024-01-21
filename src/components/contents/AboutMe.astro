@@ -2,31 +2,25 @@
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
-import { ContactMe } from "@/components/ContactMe"
 import { MyAvatar } from "@/components/MyAvatar"
 ---
 
-<Card className="col-span-2 lg:col-span-4">
+<Card className="col-span-2 md:col-span-3">
   <CardHeader>
-    <MyAvatar client:load />
+    <MyAvatar client:idle />
   </CardHeader>
-  <CardContent className="text-4xl font-bold">
+  <CardContent className="text-3xl font-bold">
     <p>Chakras Andika</p>
     <p>is a Software Enginner</p>
     <p>currently coding at Midstay</p>
   </CardContent>
 </Card>
-<Card className="col-span-2 h-full gap-2 py-3 justify-between flex flex-col lg:col-span-2">
-  <CardHeader />
-  <CardContent className="font-bold flex text-center text-xl">
-    <p>Any thoughts you'd like to discuss?</p>
+<Card className="h-full pt-6 col-span-2 md:col-span-3">
+  <CardContent className="flex flex-col h-full justify-end text-2xl font-semibold">
+    <p>as a software engineer,</p>
+    <p>my expertise lies in crafting high-performance web apps.</p>
+    <p class='text-muted-foreground'>I'm passionate about writing clean code and and dive into the realm of GIS technologies.</p>
   </CardContent>
-  <CardFooter>
-    <ContactMe />
-  </CardFooter>
 </Card>

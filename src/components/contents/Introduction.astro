@@ -7,29 +7,66 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { ContactMe } from "@/components/ContactMe"
+import { Image } from "astro:assets"
+import myImportedImage from "public/github.svg"
+
+const resolveImage = (item: { icon?: any }) => {
+  if (item.icon) {
+    return item.icon
+  } else {
+    return myImportedImage
+  }
+}
+
+const items = [
+  {
+    title: "Github",
+    icon: '',
+    link: 'https://github.com/chakraskun',
+  },
+  {
+    title: "Linkedin",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+    link: 'https://www.linkedin.com/in/chakras-andika/',
+  },
+  {
+    title: "Twitter",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg",
+    link: 'https://twitter.com/chakrasandika',
+  },
+]
 ---
 
 <Card className="col-span-2 lg:col-span-2">
   <CardHeader>
-    <CardTitle>Card Title</CardTitle>
-    <CardDescription>Card Description</CardDescription>
+    <CardTitle>🌎</CardTitle>
   </CardHeader>
-  <CardContent>
-    <p>Card Content</p>
+  <CardContent className="text-4xl font-bold">
+    <p>Based in</p>
+    <p>Jakarta,</p>
+    <p>Indonesia</p>
+    <p class="text-muted-foreground">UTC+7</p>
+  </CardContent>
+</Card>
+<Card className="col-span-2 h-full gap-2 py-3 justify-between flex flex-col lg:col-span-2">
+  <CardHeader />
+  <CardContent className="font-bold flex text-center text-xl">
+    <p>Any thoughts you'd like to discuss?</p>
   </CardContent>
   <CardFooter>
-    <p>Card Footer</p>
+    <ContactMe />
   </CardFooter>
 </Card>
-<Card className="col-span-2 lg:col-span-4">
-  <CardHeader>
-    <CardTitle>Card Title</CardTitle>
-    <CardDescription>Card Description</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p>Card Content</p>
-  </CardContent>
-  <CardFooter>
-    <p>Card Footer</p>
-  </CardFooter>
-</Card>
+<div class="grid-rows-{{items.length}} grid col-span-2 gap-2">
+  { items.map((item) => (
+    <Card className="col-span-1 h-full items-center justify-center flex w-full">
+      <a class='w-full' href={item.link} rel="noopener noreferrer" target="_blank">
+        <CardContent className="flex justify-center items-center gap-2 md:gap-3 !py-3">
+          <Image width='25' height='25' alt={item.title} src={resolveImage(item)} />
+          <p>{item.title}</p>
+        </CardContent>
+      </a>
+    </Card>
+  ))}
+</div>

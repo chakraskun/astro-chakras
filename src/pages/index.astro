@@ -6,7 +6,6 @@ import Navbar from '@/components/contents/Navbar.astro';
 import AboutMe from '@/components/contents/AboutMe.astro';
 import SkillsCard from '@/components/contents/SkillsCard.astro';
 import Introduction from '@/components/contents/Introduction.astro';
-import Contact from '@/components/contents/Contact.astro';
 ---
 
 <script is:inline>
@@ -28,14 +27,13 @@ import Contact from '@/components/contents/Contact.astro';
 	}
 </script>
 
-<Layout title="Welcome to Astro.">
+<Layout title="Hi, I'm Chakras">
 	<main>
     <section class="grid h-fit gap-2 grid-cols-2 lg:grid-cols-6 m-3 lg:mx-auto">
       <Navbar />
       <AboutMe />
       <SkillsCard />
       <Introduction />
-      <Contact />
     </section>
   </main>
 </Layout>

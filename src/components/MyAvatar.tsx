@@ -6,8 +6,8 @@ import {
 
 export function MyAvatar() {
   return (
-    <Avatar className='h-32 w-32'>
-      <AvatarImage  src="https://github.com/shadcn.png" alt="@shadcn" />
+    <Avatar className='h-24 w-24'>
+      <AvatarImage src="../public/chakras.jpeg" alt="chakras" />
       <AvatarFallback>CAK</AvatarFallback>
     </Avatar>
   )
