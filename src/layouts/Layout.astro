@@ -3,6 +3,8 @@ interface Props {
 	title: string;
 }
 
+import { ViewTransitions } from 'astro:transitions';
+import '../css/transitions.css'
 const { title } = Astro.props;
 ---
 
@@ -10,17 +12,32 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Chakras' personal website" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
 
-    <meta property="og:title" content={title} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hello.chkras.com/" />
-    <meta property="og:image" content="https://hello.chkras.com/og-image.png" />
-    <meta property="og:description" content="Chakras' personal website" />
-		<title>{title}</title>
+    <!-- HTML Meta Tags -->
+    <title> Hey, I'm Chakras, the code wizard crafting digital dreams with flair and finesse!  🧙‍♂️✨</title>
+    <meta name="description" content="Basically, if it involves making cool things happen on the web, I'm your person!
+    Feel free to geek out with me about anything tech-related or, you know, just drop by for a friendly chat. Let's make the digital world a more awesome place together! 🚀">
+
+    <meta property="og:url" content="https://hello.chkras.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=" Hey, I'm Chakras, the code wizard crafting digital dreams with flair and finesse!  🧙‍♂️✨">
+    <meta property="og:description" content="Basically, if it involves making cool things happen on the web, I'm your person!
+
+    Feel free to geek out with me about anything tech-related or, you know, just drop by for a friendly chat. Let's make the digital world a more awesome place together! 🚀">
+    <meta property="og:image" content="https://ogcdn.net/2c2c6737-47d4-4459-9969-e711eb48394c/v1/hello.chkras.com/%20Hey%2C%20I'm%20Chakras%2C%20the%20code%20wizard%20crafting%20digital%20dreams%20with%20flair%20and%20finesse!%20%20%F0%9F%A7%99%E2%80%8D%E2%99%82%EF%B8%8F%E2%9C%A8/Basically%2C%20if%20it%20involves%20making%20cool%20things%20happen%20on%20the%20web%2C%20I'm%20your%20person!%0A%0AFeel%20free%20to%20geek%20out%20with%20me%20about%20anything%20tech-related%20or%2C%20you%20know%2C%20just%20drop%20by%20for%20a%20friendly%20chat.%20Let's%20make%20the%20digital%20world%20a%20more%20awesome%20place%20together!%20%F0%9F%9A%80/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2F6b753352-79eb-40ba-89a6-38ff1809de3b.jpg%3Ftoken%3DA8E03k4OvsT8b3BthIDzreRHDm6IQNrrfP0Csp5ulxY%26height%3D1500%26width%3D1200%26expires%3D33245026095/og.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="hello.chkras.com">
+    <meta property="twitter:url" content="https://hello.chkras.com">
+    <meta name="twitter:title" content=" Hey, I'm Chakras, the code wizard crafting digital dreams with flair and finesse!  🧙‍♂️✨">
+    <meta name="twitter:description" content="Basically, if it involves making cool things happen on the web, I'm your person!
+
+    Feel free to geek out with me about anything tech-related or, you know, just drop by for a friendly chat. Let's make the digital world a more awesome place together! 🚀">
+    <meta name="twitter:image" content="https://ogcdn.net/2c2c6737-47d4-4459-9969-e711eb48394c/v1/hello.chkras.com/%20Hey%2C%20I'm%20Chakras%2C%20the%20code%20wizard%20crafting%20digital%20dreams%20with%20flair%20and%20finesse!%20%20%F0%9F%A7%99%E2%80%8D%E2%99%82%EF%B8%8F%E2%9C%A8/Basically%2C%20if%20it%20involves%20making%20cool%20things%20happen%20on%20the%20web%2C%20I'm%20your%20person!%0A%0AFeel%20free%20to%20geek%20out%20with%20me%20about%20anything%20tech-related%20or%2C%20you%20know%2C%20just%20drop%20by%20for%20a%20friendly%20chat.%20Let's%20make%20the%20digital%20world%20a%20more%20awesome%20place%20together!%20%F0%9F%9A%80/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2F6b753352-79eb-40ba-89a6-38ff1809de3b.jpg%3Ftoken%3DA8E03k4OvsT8b3BthIDzreRHDm6IQNrrfP0Csp5ulxY%26height%3D1500%26width%3D1200%26expires%3D33245026095/og.png">
+    <ViewTransitions />
 	</head>
 	<body>
 		<slot />
